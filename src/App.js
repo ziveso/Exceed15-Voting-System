@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-// import * as firebase from "firebase";
-// import firebaseConfig from './Firebase/Config'
+import * as firebase from "firebase";
+import firebaseConfig from './Firebase/Config'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Login , isLogin, Logout } from './Login/User'
+import Admin from './Admin/Index'
 
 export class App extends Component {
 
@@ -13,6 +14,7 @@ export class App extends Component {
             isLogin: false,
             login: ""
         }
+        firebase.initializeApp(firebaseConfig);
         this.handleChange = this.handleChange.bind(this)
     }
     componentDidMount() {
@@ -44,7 +46,7 @@ export class App extends Component {
                     {/* TODO */}
                     {/* REACT ROUTER */}
                     {/* ADMIN */}
-                    {/* <Route path='/admin' /> */}
+                    <Route path='/admin' component={Admin}/>
                     {/* USER */}
                     {/* <Route path='/' /> */}
                 </div>
