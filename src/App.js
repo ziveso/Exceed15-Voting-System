@@ -72,7 +72,6 @@ export class App extends Component {
           {/* <Route path='/admin' /> */}
           {/* USER */}
           {/* <Route path='/' /> */}
-          {/*EIEI*/}
         </div>
       </Router>
     )
