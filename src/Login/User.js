@@ -2,14 +2,14 @@ import studentIds from '../User/studentId'
 
 export function Login(studentId) {
     var currentStudent = null;
-    for(var i = 0 ; i < studentIds.studentIds.length ; i++) {
-        if(studentId===studentIds.studentIds[i]) {
-            currentStudent = studentIds.studentIds[i]
+    for (var i = 0; i < studentIds.length; i++) {
+        if (studentId === studentIds[i]) {
+            currentStudent = studentIds[i]
             break;
         }
     }
 
-    if(currentStudent==null){
+    if (currentStudent == null) {
         return -1
     }
 
@@ -19,11 +19,10 @@ export function Login(studentId) {
 
 export function Logout() {
     localStorage.studentId = null
-    return null;
 }
 
 export function isLogin() {
-    if(localStorage.studentId) {
+    if (localStorage.studentId.length === 10) {
         return localStorage.studentId
     }
     return null;
