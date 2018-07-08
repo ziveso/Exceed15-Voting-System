@@ -1,3 +1,0 @@
-// login
-// logout
-// register
