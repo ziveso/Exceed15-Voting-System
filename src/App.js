@@ -30,9 +30,18 @@ export class App extends Component {
             <div>
                 { this.state.isLogin? <h1>Logged-in</h1>: <h1>Not Log-in</h1>}
                 <input value={this.state.login} onChange={ this.handleChange }/>
+                {/* แยก component มี state เป็นของตัวเอง */}
                 <button onClick={ () => Login(this.state.login) }>Login</button>
-                
+                {/* แยก component มี state เป็นของตัวเอง */}
                 <button onClick={ () => Logout() }>Logout</button>
+                {/* อย่าลืม update state ใน class นี้เพื่อ จะได้เอาไปเปลี่ยน navbar */}
+
+
+
+                {/* TODO */}
+                {/* REACT ROUTER */}
+                {/* ADMIN */}
+                {/* USER */}
             </div>
         )
     }
