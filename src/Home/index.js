@@ -1,9 +1,9 @@
 import React from 'react'
-import { redirectIfNotLoggedIn } from '../utils/auth'
+import auth from '../utils/auth'
 
 class Home extends React.Component {
   componentDidMount () {
-    redirectIfNotLoggedIn()
+    auth.redirectIfNotLoggedIn()
   }
 
   render () {

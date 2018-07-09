@@ -1,12 +1,12 @@
 import React from 'react'
 import { Alert, Jumbotron, Button } from 'reactstrap'
-import { isLogin } from '../utils/auth'
+import auth from '../utils/auth'
 
 class Vote extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      isLogin: isLogin()
+      isLogin: auth.isLoggedIn()
     }
   }
   render () {

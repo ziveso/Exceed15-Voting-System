@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import * as firebase from 'firebase'
 import firebaseConfig from './Firebase/Config'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { login, isLoggedIn, logout } from './utils/auth'
+import auth from './utils/auth'
 import LoginPage from './Login'
 import './App.css'
 import { Index } from './Dashboard/Index'
@@ -20,18 +20,18 @@ export class App extends Component {
   }
 
   componentDidMount () {
-    const isLogged = isLoggedIn()
+    const isLogged = auth.isLoggedIn()
     if (isLogged) this.setState({ user: isLogged, isLogin: true })
   }
 
   login () {
-    const id = login(this.state.id)
+    const id = auth.login(this.state.id)
     if (id === -1) console.log('Throw modal')
     else this.setState({ user: id, isLogin: true })
   }
 
   logout () {
-    logout()
+    auth.logout()
     this.setState({ user: '', isLogin: false, id: '' })
   }
 
