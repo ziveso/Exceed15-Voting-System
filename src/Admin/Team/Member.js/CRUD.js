@@ -12,7 +12,7 @@ export function editMember(team, name, newname, imageUrl) {
 
 // get Team member
 export function getMembers(team) {
-
+    
 }
 
 // Delete Team member

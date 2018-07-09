@@ -11,8 +11,13 @@ export class Index extends Component {
       this.handleChangeSideBar = this.handleChangeSideBar.bind(this)
     }
 
+    componentDidMount() {
+      this.setState({ sidebar: parseInt(localStorage.sidebar,10) })
+    }
+
     handleChangeSideBar(index) {
       this.setState( { sidebar: index })
+      localStorage.sidebar = index;
     }
 
     render() {

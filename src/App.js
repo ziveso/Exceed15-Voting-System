@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as firebase from "firebase";
 import firebaseConfig from './Firebase/Config'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { Login , isLogin, Logout } from './Login/User'
 import { InputGroup, InputGroupAddon, InputGroupText, Input, Button } from 'reactstrap'
 import Admin from './Admin/Index'
@@ -48,7 +48,7 @@ export class App extends Component {
         <div>
           {/* Navbar */}
           <div className='nav' style={{ padding: '20px' }}>
-            <h2 style={{ marginLeft: '50px' }}>EXCEED 15th</h2>
+            <Link to="/"><h2 style={{ marginLeft: '50px' }}>EXCEED 15th</h2></Link>
             <div style={{ marginLeft: '50px' }}>
               {this.state.isLogin ?
                 <div style={{ display: 'flex' }}>
@@ -65,8 +65,8 @@ export class App extends Component {
                   <Button color='primary' className="nav-button" onClick={() => this.login()}>Login</Button>
                 </div>}
             </div>
-          </div>
           <Button onClick={() => console.log(this.state)}>Log state</Button>
+          </div>
 
           {/* TODO */}
           {/* REACT ROUTER */}
