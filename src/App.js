@@ -3,7 +3,6 @@ import * as firebase from 'firebase'
 import firebaseConfig from './Firebase/Config'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { login, isLoggedIn, logout } from './Login/User'
-import Admin from './Admin/Index'
 import LoginPage from './Login/Login'
 import './App.css'
 import { Button } from 'reactstrap'
@@ -40,11 +39,9 @@ export class App extends Component {
       <Router>
         <div>
           <Button onClick={() => console.log(this.state)}>Log state</Button>
-          <Link to='/admin'>หน้าแอดมินจ้า</Link>
           {/* TODO */}
           {/* REACT ROUTER */}
           {/* ADMIN */}
-          <Route path='/admin' component={Admin} />
           <Route
             path='/login'
             component={() => (
