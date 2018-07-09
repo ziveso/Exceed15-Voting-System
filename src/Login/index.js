@@ -25,7 +25,7 @@ class Login extends React.Component {
   render () {
     return (
       <div style={full}>
-        <div className=''>
+        <div>
           <h1>EXCEED 15th</h1>
           <div style={{
             boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
