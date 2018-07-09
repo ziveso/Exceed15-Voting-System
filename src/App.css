@@ -6,14 +6,10 @@
 
 .nav {
   color: white;
-<<<<<<< HEAD
   background: linear-gradient(to right, black, blue);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-=======
-  background: linear-gradient(to right, black, #1dad3a);
 }
 
 .isActive {
   background: rgb(43, 148, 69);
->>>>>>> 0e8b38138a479d41f5085e23a0ca5038931064cc
 }

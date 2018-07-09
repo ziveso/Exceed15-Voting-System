@@ -48,8 +48,8 @@ export class App extends Component {
     this.setState({ user: '', isLogin: false, id: '' })
   }
 
-  getLoginComponent() {
-    return this.state.isLogin ?
+  getLoginComponent =
+    this.state.isLogin ?
       <div style={{ display: 'flex' }}>
         <h5 style={{ margin: 'auto', color: 'yellow' }}>{this.state.user}</h5>
         <Button color='danger' className="nav-button" onClick={() => this.logout()}>Logout</Button>
@@ -63,7 +63,6 @@ export class App extends Component {
         </InputGroup>
         <Button color='primary' className="nav-button" style={{ border: '2px solid white', background: 'transparent' }} onClick={() => this.login()}>Login</Button>
       </div>
-  }
 
   render() {
     return (
@@ -73,7 +72,7 @@ export class App extends Component {
           <div className='nav' style={{ padding: '20px' }}>
             <Link to="/"><h2 style={{ marginLeft: '50px' }}>EXCEED 15th</h2></Link>
             <div style={{ marginLeft: '50px' }}>
-              {this.getLoginComponent()}
+              {this.getLoginComponent}
             </div>
             <Button onClick={() => console.log(this.state)}>Log state</Button>
             <Link to="/admin">หน้าแอดมินจ้า</Link>
