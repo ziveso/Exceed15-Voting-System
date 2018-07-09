@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { login, isLoggedIn, logout } from './utils/auth'
 import LoginPage from './Login'
 import './App.css'
+import { Index } from './Dashboard/Index'
+import { Button } from 'reactstrap'
+import Home from './Home'
 
 export class App extends Component {
   constructor (props) {
@@ -39,8 +42,7 @@ export class App extends Component {
           {/* TODO */}
           {/* REACT ROUTER */}
           {/* ADMIN */}
-          <Route
-            path='/login'
+          <Route path='/login'
             component={() => (
               <LoginPage
                 login={this.login}
@@ -48,8 +50,10 @@ export class App extends Component {
               />
             )}
           />
+          <Route path='/' exact component={Home} />
           {/* USER */}
-          {/* <Route path='/' /> */}
+          <Route path='/' component={() => 'Vote'} />
+          <Route path='/dashboard' component={Index} />
         </div>
       </Router>
     )
