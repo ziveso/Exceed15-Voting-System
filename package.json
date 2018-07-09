@@ -53,6 +53,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "update-db": "node scripts/updateDB.js",
     "lint": "eslint src/*.js"
   },
   "jest": {

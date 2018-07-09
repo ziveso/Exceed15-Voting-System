@@ -1,6 +1,6 @@
 import React from 'react'
 import { Alert, Jumbotron, Button } from 'reactstrap'
-import { isLogin } from '../Login/User'
+import { isLogin } from '../utils/auth'
 
 class Vote extends React.Component {
   constructor (props) {
