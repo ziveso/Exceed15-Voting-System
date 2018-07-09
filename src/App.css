@@ -1,0 +1,10 @@
+.nav-button {
+  margin-left: 20px; 
+  height: 40px; 
+  width: 80px; 
+}
+
+.nav {
+  color: white;
+  background: linear-gradient(to right,black,#1dad3a);
+}
