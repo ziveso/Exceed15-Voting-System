@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Member } from './Member.js/Member';
+import { Member } from '../Member/Member';
 
 export class Team extends Component {
   render() {

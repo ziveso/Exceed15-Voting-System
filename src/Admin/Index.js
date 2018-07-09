@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { ManageTeam } from './Team/ManageTeam';
-import { TeamWrap } from './Team/TeamWrap';
+import { ManageTeam } from './Team/Components/ManageTeam';
+import { TeamWrap } from './Team/Components/TeamWrap';
 
 export class Index extends Component {
     constructor() {
@@ -22,7 +22,7 @@ export class Index extends Component {
 
     render() {
 
-      const menus = [ 'Team', 'Team Managment', 'Dashboard' ]
+      const menus = [ 'Team', 'Team Management', 'Dashboard' ]
       const menuscomponents = menus.map( (item,index) => {
           const isActive = this.state.sidebar === index ? 'isActive' : ''
           return <div style={{ width: '100%' }} onClick={ () => this.handleChangeSideBar(index) } className={`${isActive}`}>{ item }</div>

@@ -66,6 +66,7 @@ export class App extends Component {
                 </div>}
             </div>
           <Button onClick={() => console.log(this.state)}>Log state</Button>
+          <Link to="/admin">หน้าแอดมินจ้า</Link>
           </div>
 
           {/* TODO */}

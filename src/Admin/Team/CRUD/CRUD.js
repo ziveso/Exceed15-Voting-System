@@ -13,12 +13,19 @@ export async function getTeam(name) {
     return jsonObject;
 }
 
-
 export function deleteTeam(name) {
     firebase.database().ref('/team/'+name).remove()
 }
 
+export function getAllTeams() {
+    let jsonObject;
+    firebase.database().ref('/team').on('value', snap => {
+        jsonObject = snap.val();
+    })
+    return jsonObject;
+}
+
 // update
-// export function setTeam(name,newname) {
-//     firebase.database().ref('/team').push(name)
-// }
+export function setTeam(name, newname) {
+    firebase.database().ref('/team').push(name)
+}
