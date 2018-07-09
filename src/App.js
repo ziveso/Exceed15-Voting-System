@@ -6,6 +6,7 @@ import { login, isLoggedIn, logout } from './utils/auth'
 import LoginPage from './Login/Login'
 import './App.css'
 import { Button } from 'reactstrap'
+import Home from './Home'
 
 export class App extends Component {
   constructor (props) {
@@ -42,8 +43,7 @@ export class App extends Component {
           {/* TODO */}
           {/* REACT ROUTER */}
           {/* ADMIN */}
-          <Route
-            path='/login'
+          <Route path='/login'
             component={() => (
               <LoginPage
                 id={this.state.id}
@@ -52,6 +52,7 @@ export class App extends Component {
               />
             )}
           />
+          <Route path='/' exact component={Home} />
           {/* USER */}
           {/* <Route path='/' /> */}
         </div>
