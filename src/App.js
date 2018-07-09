@@ -6,33 +6,12 @@ import auth from './utils/auth'
 import LoginPage from './Login'
 import './App.css'
 import { Index } from './Dashboard/Index'
-import { Button } from 'reactstrap'
 import Home from './Home'
 
 export class App extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-      user: '',
-      isLogin: false
-    }
     firebase.initializeApp(firebaseConfig)
-  }
-
-  componentDidMount () {
-    const isLogged = auth.isLoggedIn()
-    if (isLogged) this.setState({ user: isLogged, isLogin: true })
-  }
-
-  login () {
-    const id = auth.login(this.state.id)
-    if (id === -1) console.log('Throw modal')
-    else this.setState({ user: id, isLogin: true })
-  }
-
-  logout () {
-    auth.logout()
-    this.setState({ user: '', isLogin: false, id: '' })
   }
 
   render () {
@@ -43,12 +22,7 @@ export class App extends Component {
           {/* REACT ROUTER */}
           {/* ADMIN */}
           <Route path='/login'
-            component={() => (
-              <LoginPage
-                login={this.login}
-                logout={this.logout}
-              />
-            )}
+            component={LoginPage}
           />
           <Route path='/' exact component={Home} />
           {/* USER */}

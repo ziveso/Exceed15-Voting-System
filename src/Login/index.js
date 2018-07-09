@@ -1,9 +1,7 @@
 import React from 'react'
 import {
   InputGroup,
-  InputGroupAddon,
   Input,
-  InputGroupText,
   Button
 } from 'reactstrap'
 import auth from '../utils/auth'
