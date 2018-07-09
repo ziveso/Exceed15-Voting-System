@@ -1,26 +1,23 @@
 import studentIds from '../User/studentId'
 
-export const Login = studentId => {
-  var currentStudent = null
-  for (var i = 0; i < studentIds.length; i++) {
-    if (studentId === studentIds[i]) {
-      currentStudent = studentIds[i]
-      break
-    }
+export const login = studentId => {
+  if (studentIds.includes(studentId)) {
+    window.localStorage.studentId = studentId
+    return true
   }
-
-  if (currentStudent == null) {
-    return -1
-  }
-
-  window.localStorage.studentId = studentId
-  return currentStudent
+  return false
 }
 
-export const Logout = () => {
+export const logout = () => {
   window.localStorage.studentId = null
 }
 
-export const isLogin = () => {
+export const isLoggedIn = () => {
   return (window.localStorage.studentId && window.localStorage.studentId.length === 10) || false
+}
+
+export const redirectIfNotLoggedIn = () => {
+  if (!isLoggedIn()) {
+    window.location.replace(window.location.origin + '/login')
+  }
 }
