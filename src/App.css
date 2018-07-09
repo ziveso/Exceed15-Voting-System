@@ -1,10 +1,11 @@
 .nav-button {
-  margin-left: 20px; 
-  height: 40px; 
-  width: 80px; 
+  margin-left: 20px;
+  height: 40px;
+  width: 80px;
 }
 
 .nav {
   color: white;
-  background: linear-gradient(to right,black,#1dad3a);
+  background: linear-gradient(to right, black, blue);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

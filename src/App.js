@@ -60,11 +60,11 @@ export class App extends Component {
                     </InputGroupAddon>
                     <Input placeholder="Student ID" value={this.state.id} onChange={this.handleChange} />
                   </InputGroup>
-                  <Button color='primary' className="nav-button" onClick={() => this.login()}>Login</Button>
+                  <Button color='primary' className="nav-button" style={{ border: '2px solid white', background: 'transparent' }} onClick={() => this.login()}>Login</Button>
                 </div>}
             </div>
           </div>
-          <Button onClick={() => console.log(this.state)}>Log state</Button>
+          {/* <Button onClick={() => console.log(this.state)}>Log state</Button> */}
 
           {/* TODO */}
           {/* REACT ROUTER */}
