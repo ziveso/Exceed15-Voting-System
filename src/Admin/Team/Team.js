@@ -1,28 +1,21 @@
 import React, { Component } from 'react'
-import * as TeamManagment from './CRUD/CRUD'
+import { Member } from './Member.js/Member';
 
 export class Team extends Component {
-    constructor() {
-        super()
-        this.state = {
-            teamname: "",
-        }
-    }
-    render() {
-        return (
-        <div>
-            <h3>TeamManagment</h3>
-            <input onChange={this.handleChangeTeamName} value={this.state.teamname} />
-            <button onClick={ () => TeamManagment.createTeam(this.state.teamname) }>Create</button>
-
-
-            <button onClick={ () => TeamManagment.getTeam(this.state.teamname) }>GET</button>
-
-
-            <button onClick={ () => TeamManagment.deleteTeam(this.state.teamname) }>DELETE</button>
+  render() {
+    return (
+      <div>
+        <h1>Team : {this.props.title}</h1>
+        <div className="d-flex" style={{flexWrap: 'wrap'}}>
+            <Member />
+            <Member />
+            <Member />
+            <Member />
+            <Member />
         </div>
-        )
-    }
+      </div>
+    )
+  }
 }
 
 export default Team
