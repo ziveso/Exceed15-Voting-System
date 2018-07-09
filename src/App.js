@@ -3,7 +3,7 @@ import * as firebase from 'firebase'
 import firebaseConfig from './Firebase/Config'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { login, isLoggedIn, logout } from './utils/auth'
-import LoginPage from './Login/Login'
+import LoginPage from './Login'
 import './App.css'
 
 export class App extends Component {
@@ -11,8 +11,7 @@ export class App extends Component {
     super(props)
     this.state = {
       user: '',
-      isLogin: false,
-      id: ''
+      isLogin: false
     }
     firebase.initializeApp(firebaseConfig)
   }
@@ -44,7 +43,6 @@ export class App extends Component {
             path='/login'
             component={() => (
               <LoginPage
-                id={this.state.id}
                 login={this.login}
                 logout={this.logout}
               />
