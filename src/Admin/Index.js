@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import * as TeamManagment from './Team/CRUD/CRUD'
+import { Team } from './Team/Team';
 
 export class Index extends Component {
     constructor() {
       super()
       this.state = {
-        teamname: ""
+        sidebar: 0,
       }
       this.handleChangeTeamName = this.handleChangeTeamName.bind(this)
     }
@@ -17,16 +17,16 @@ export class Index extends Component {
     render() {
       return (
         <div>
-          <h1>I'm admin</h1>
-
-          <input onChange={this.handleChangeTeamName} value={this.state.teamname} />
-          <button onClick={ () => TeamManagment.createTeam(this.state.teamname) }>Create</button>
-
-
-          <button onClick={ () => TeamManagment.getTeam(this.state.teamname) }>GET</button>
-
-
-          <button onClick={ () => TeamManagment.deleteTeam(this.state.teamname) }>DELETE</button>
+          <div className="row">
+            <div className="col-md-2">
+                <div>Team Managment</div>
+                {/* Switch Dashboard to top */}
+                <div>Dashboard</div>
+            </div>
+            <div className="col-md-10">
+                { this.state.sidebar === 0 ? <Team /> : null}
+            </div>
+          </div>
         </div>
       )
     }

@@ -11,9 +11,9 @@ export class App extends Component {
   constructor() {
       super()
       this.state = {
-          user: null,
+          user: '',
           isLogin: false,
-          login: ""
+          id: ''
       }
       firebase.initializeApp(firebaseConfig);
       this.handleChange = this.handleChange.bind(this)
@@ -71,7 +71,7 @@ export class App extends Component {
           {/* TODO */}
           {/* REACT ROUTER */}
           {/* ADMIN */}
-          {/* <Route path='/admin' /> */}
+          <Route path='/admin' component={Admin}/>
           {/* USER */}
           {/* <Route path='/' /> */}
         </div>
