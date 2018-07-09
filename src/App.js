@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import * as firebase from 'firebase'
 import firebaseConfig from './Firebase/Config'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { login, isLoggedIn, logout } from './Login/User'
+import { login, isLoggedIn, logout } from './utils/auth'
 import LoginPage from './Login/Login'
 import './App.css'
-import { Button } from 'reactstrap'
 import { Index } from './Dashboard/Index';
 
 export class App extends Component {
@@ -39,7 +38,6 @@ export class App extends Component {
     return (
       <Router>
         <div>
-          <Button onClick={() => console.log(this.state)}>Log state</Button>
           {/* TODO */}
           {/* REACT ROUTER */}
           {/* ADMIN */}
