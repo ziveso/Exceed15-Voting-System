@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 // import * as firebase from "firebase";
 // import firebaseConfig from './Firebase/Config'
-import { InputGroup, InputGroupAddon, InputGroupText, Input, Button } from 'reactstrap'
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Input,
+  Button
+} from 'reactstrap'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Login, isLogin, Logout } from './Login/User'
 import './App.css'
