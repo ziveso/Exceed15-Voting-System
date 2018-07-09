@@ -6,6 +6,7 @@ import { login, isLoggedIn, logout } from './Login/User'
 import LoginPage from './Login/Login'
 import './App.css'
 import { Button } from 'reactstrap'
+import { Index } from './Dashboard/Index';
 
 export class App extends Component {
   constructor (props) {
@@ -53,7 +54,8 @@ export class App extends Component {
             )}
           />
           {/* USER */}
-          {/* <Route path='/' /> */}
+          <Route path='/' component={() => 'Vote'} />
+          <Route path='/dashboard' component={Index} />
         </div>
       </Router>
     )
