@@ -52,7 +52,6 @@ export class App extends Component {
           />
           <Route path='/' exact component={Home} />
           {/* USER */}
-          <Route path='/' component={() => 'Vote'} />
           <Route path='/dashboard' component={Index} />
         </div>
       </Router>
