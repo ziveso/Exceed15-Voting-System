@@ -2,38 +2,31 @@ import React, { Component } from 'react'
 import * as firebase from 'firebase'
 import firebaseConfig from './Firebase/Config'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Login, isLogin, Logout } from './Login/User'
+import { login, isLoggedIn, logout } from './Login/User'
 import Admin from './Admin/Index'
 import LoginPage from './Login/Login'
 import './App.css'
-import {
-	InputGroup,
-	InputGroupAddon,
-	InputGroupText,
-	Input,
-	Button,
-} from 'reactstrap'
+import { Button } from 'reactstrap'
 
 export class App extends Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
 			user: '',
 			isLogin: false,
 			id: ''
 		}
 		firebase.initializeApp(firebaseConfig);
-		this.handleChange = this.handleChange.bind(this)
 	}
 
 	componentDidMount() {
-		const isLogged = isLogin()
+		const isLogged = isLoggedIn()
 		if (isLogged)
 			this.setState({ user: isLogged, isLogin: true })
 	}
 
 	login() {
-		const id = Login(this.state.id)
+		const id = login(this.state.id)
 		if (id === -1)
 			console.log('Throw modal')
 		else
@@ -41,7 +34,7 @@ export class App extends Component {
 	}
 
 	logout() {
-		Logout()
+		logout()
 		this.setState({ user: '', isLogin: false, id: '' })
 	}
 
