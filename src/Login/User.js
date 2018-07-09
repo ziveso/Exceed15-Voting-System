@@ -22,7 +22,7 @@ export function Logout() {
 }
 
 export function isLogin() {
-    if (localStorage.studentId.length === 10) {
+    if (localStorage !== undefined && localStorage !== null && localStorage.studentId.length === 10) {
         return localStorage.studentId
     }
     return null;

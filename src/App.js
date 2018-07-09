@@ -48,10 +48,10 @@ export class App extends Component {
     this.setState({ user: '', isLogin: false, id: '' })
   }
 
-  getLoginComponent =
-    this.state.isLogin ?
+  getLoginComponent() {
+    return this.state.isLogin ?
       <div style={{ display: 'flex' }}>
-        <h5 style={{ margin: 'auto', color: 'yellow' }}>{this.state.user}</h5>
+        <h5 style={{ margin: 'auto', color: 'red' }}>{this.state.user}</h5>
         <Button color='danger' className="nav-button" onClick={() => this.logout()}>Logout</Button>
       </div>
       : <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -61,8 +61,15 @@ export class App extends Component {
           </InputGroupAddon>
           <Input placeholder="Student ID" value={this.state.id} onChange={this.handleChange} />
         </InputGroup>
-        <Button color='primary' className="nav-button" style={{ border: '2px solid white', background: 'transparent' }} onClick={() => this.login()}>Login</Button>
+        <Button color='primary'
+          className="nav-button"
+          style={{
+            border: '2px solid white',
+            background: 'transparent'
+          }}
+          onClick={() => this.login()}>Login</Button>
       </div>
+  }
 
   render() {
     return (
@@ -70,13 +77,13 @@ export class App extends Component {
         <div>
           {/* Navbar */}
           <div className='nav' style={{ padding: '20px' }}>
-            <Link to="/"><h2 style={{ marginLeft: '50px' }}>EXCEED 15th</h2></Link>
+            <Link to="/"><h2 style={{ marginLeft: '50px', color: 'yellow' }}>EXCEED 15th</h2></Link>
             <div style={{ marginLeft: '50px' }}>
-              {this.getLoginComponent}
+              {this.getLoginComponent()}
             </div>
-            <Button onClick={() => console.log(this.state)}>Log state</Button>
-            <Link to="/admin">หน้าแอดมินจ้า</Link>
           </div>
+          <Button onClick={() => console.log(this.state)}>Log state</Button>
+          <Link to="/admin">หน้าแอดมินจ้า</Link>
 
           {/* TODO */}
           {/* REACT ROUTER */}
