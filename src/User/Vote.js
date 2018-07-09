@@ -3,13 +3,13 @@ import { Alert, Jumbotron, Button } from 'reactstrap'
 import { isLogin } from '../Login/User'
 
 class Vote extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       isLogin: isLogin()
     }
   }
-  render() {
+  render () {
     return (
       <div>
         <Jumbotron>
