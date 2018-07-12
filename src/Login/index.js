@@ -35,7 +35,6 @@ class Login extends React.Component {
     }
 
     if (auth.login(this.state.id)) {
-      console.log(this.props)
       this.props.history.replace('/')
     } else {
       this.setState({

@@ -33,12 +33,13 @@ class Home extends React.Component {
           <div>Home</div>
           <h1 style={{ letterSpacing: '13px',
             color: 'rgb(160,160,160)',
-            webkitTextStroke: '3px rgb(160,160,160)' }}>EXCEED15</h1>
+            WebkitTextStroke: '3px rgb(160,160,160)' }}>EXCEED15</h1>
           <div style={{ border: '2px solid black',
             width: '100%',
             maxWidth: '200px',
             margin: 'auto',
-            padding: '5px 0 5px 0' }}>STUDENT ID</div>
+            padding: '5px 0 5px 0' }}>{ window.localStorage.studentId }</div>
+          <button onClick={auth.logout}>Logout(mock)</button>
         </div>
         <div style={{ marginTop: '10px' }}>
           <ImageSlider />

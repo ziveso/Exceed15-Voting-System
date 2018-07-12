@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
+import { ButtonWrapper } from './ButtonWrapper'
 
 export class index extends Component {
   render () {
@@ -8,12 +9,12 @@ export class index extends Component {
       <div id='vote'>
         <div className='container' style={style}>
           <div className='row'>
-            <div className='col-md-5'>
+            <div className='col-md-5 text-center'>
               <span className='title'>{this.props.title}</span>
             </div>
             <div className='col-md-7'>
-              <div style={{ background: 'black', minHeight: '500px', width: '104%' }}>
-                <h1 style={{ color: 'white' }}>background image</h1>
+              <div style={{ background: 'cyan', minHeight: '500px', width: '100%' }}>
+                <ButtonWrapper />
               </div>
             </div>
           </div>

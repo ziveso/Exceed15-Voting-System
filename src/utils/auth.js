@@ -10,6 +10,7 @@ const login = studentId => {
 
 const logout = () => {
   window.localStorage.studentId = null
+  window.location.replace(window.location.origin + '/login')
 }
 
 const isLoggedIn = () => {

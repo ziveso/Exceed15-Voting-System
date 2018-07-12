@@ -1,9 +1,5 @@
 #vote .title {
-    position: absolute;
     font-size: 2.0rem;
-    top: 50%;
-    right: 50%;
-    transform: rotate(-90deg);
 }
 
 #vote .container{
@@ -12,4 +8,13 @@
 
 #vote {
     margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    #vote .title {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: rotate(-90deg);
+    }
 }
