@@ -18,13 +18,10 @@ export class App extends Component {
     return (
       <Router>
         <div>
-          {/* TODO */}
           {/* REACT ROUTER */}
-          {/* ADMIN */}
-          <Route path='/login'
-            component={LoginPage}
-          />
           <Route path='/' exact component={Home} />
+
+          <Route path='/login' component={LoginPage} />
           {/* USER */}
           <Route path='/dashboard' component={Index} />
         </div>
