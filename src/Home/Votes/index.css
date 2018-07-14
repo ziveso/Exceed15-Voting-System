@@ -2,17 +2,17 @@
     font-size: 2.5rem;
     font-weight: 650;
     letter-spacing: 5.5px;
-    padding: 50px 0;
     background-image: url('./background.jpeg');
     background-size: cover;
 }
 
 #vote .container{
-    min-height: 500px;
+    min-height: 470px;
 }
 
 #vote {
     margin-top: 20px;
+    padding-bottom: -20px;
 }
 
 @media (min-width: 768px) {
