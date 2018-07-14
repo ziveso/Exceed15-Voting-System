@@ -6,10 +6,23 @@ import {
 } from 'reactstrap'
 import ImageSlider from './ImageSlider'
 import Vote from './Votes/index'
+import { currentVote } from '../utils/vote'
+import { type } from '../config/config'
 
 class Home extends React.Component {
+  constructor (props) {
+    super(props)
+    let vote = {}
+    type.forEach((item) => {
+      vote = {...vote, [item]: null}
+    })
+    this.state = {
+      vote
+    }
+  }
   componentDidMount () {
     auth.redirectIfNotLoggedIn()
+    currentVote(window.localStorage.studentId, this)
   }
 
   getCard = (groupName, src, content) => {
@@ -27,6 +40,9 @@ class Home extends React.Component {
   }
 
   render () {
+    const votecomponent = type.map((item, index) => {
+      return <Vote key={`vote${index}`} title={item.toUpperCase()} voted={this.state.vote[item]} />
+    })
     return (
       <div>
         <div className='text-center'>
@@ -45,9 +61,7 @@ class Home extends React.Component {
           <ImageSlider />
         </div>
 
-        <Vote title='SOFTWARE' />
-        <Vote title='HARDWARE' />
-        <Vote title='DESIGN' />
+        { votecomponent }
         {/* {this.getCard('คสช', 'https://www.matichon.co.th/wp-content/uploads/2017/09/col01271258p1.jpg', '1. ประยุทธ 2. ประวิทย์ 3. ...')} */}
       </div>
     )

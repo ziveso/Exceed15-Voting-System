@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
+import './button.css'
+import { vote } from '../../utils/vote'
 
 export class Button extends Component {
+  handleClick = () => {
+    vote(window.localStorage.studentId, this.props.type, this.props.children)
+  }
   render () {
+    const style = this.props.voted === this.props.children ? 'is-active' : ''
     return (
       <div className='col-6 text-center'>
-        <button style={{ background: 'rgb(243,22,142)',
-          color: 'white',
-          borderRadius: '20px',
-          padding: '5px 25px',
-          border: '5px solid rgba(243,22,00,0.5)',
-          marginTop: '20px' }}>{this.props.children}</button>
+        <button className={`vote-button ${style}`} onClick={this.handleClick}>{this.props.children}</button>
       </div>
     )
   }

@@ -14,6 +14,10 @@ export class App extends Component {
     firebase.initializeApp(firebaseConfig)
   }
 
+  componentDidMount () {
+
+  }
+
   render () {
     return (
       <Router>

@@ -1,0 +1,20 @@
+.vote-button {
+    background: rgb(0,0,0);
+    color: white;
+    border-radius: 4px;
+    padding: 5px 25px;
+    border: 1px solid rgba(255,255,255,0.5);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.vote-button:hover {
+    color: rgb(65, 111, 196);
+    border: 1px solid rgb(65, 111, 196);
+}
+
+.vote-button.is-active {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+}

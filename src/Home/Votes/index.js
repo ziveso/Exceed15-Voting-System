@@ -4,19 +4,13 @@ import { ButtonWrapper } from './ButtonWrapper'
 
 export class index extends Component {
   render () {
-    const style = { background: 'rgb(166,245,219)' }
+    const style = { background: 'rgb(41,41,41)', color: 'white' }
     return (
       <div id='vote'>
         <div className='container' style={style}>
           <div className='row'>
-            <div className='col-md-5 text-center'>
-              <span className='title'>{this.props.title}</span>
-            </div>
-            <div className='col-md-7'>
-              <div style={{ background: 'cyan', minHeight: '500px', width: '100%' }}>
-                <ButtonWrapper />
-              </div>
-            </div>
+            <div className='col-12 col-md-5 title text-center'><span>{this.props.title}</span></div>
+            <div className='col-12 col-md-7'><ButtonWrapper voted={this.props.voted} type={this.props.title} /></div>
           </div>
         </div>
       </div>

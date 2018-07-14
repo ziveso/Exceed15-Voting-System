@@ -1,5 +1,10 @@
 #vote .title {
-    font-size: 2.0rem;
+    font-size: 2.5rem;
+    font-weight: 650;
+    letter-spacing: 5.5px;
+    padding: 50px 0;
+    background-image: url('./background.jpeg');
+    background-size: cover;
 }
 
 #vote .container{
@@ -11,10 +16,11 @@
 }
 
 @media (min-width: 768px) {
-    #vote .title {
+    #vote .title span{
         position: absolute;
         top: 50%;
-        right: 50%;
-        transform: rotate(-90deg);
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+
     }
 }

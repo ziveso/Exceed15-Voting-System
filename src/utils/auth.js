@@ -1,4 +1,4 @@
-import studentIds from '../User/studentId'
+import studentIds from '../config/studentId'
 
 const login = studentId => {
   if (studentIds.includes(studentId)) {
