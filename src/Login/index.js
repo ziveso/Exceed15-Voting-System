@@ -17,7 +17,7 @@ const full = {
 }
 
 class Login extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       id: '',
@@ -44,7 +44,7 @@ class Login extends React.Component {
     }
   }
 
-  render () {
+  render() {
     return (
       <div style={full}>
         <div className='p-2 w-100 text-center'>
@@ -53,7 +53,8 @@ class Login extends React.Component {
             onSubmit={this.login}
             style={{
               maxWidth: '500px',
-              margin: 'auto'
+              margin: 'auto',
+              marginTop: '20px'
             }}
           >
             <InputGroup
@@ -64,9 +65,6 @@ class Login extends React.Component {
                 boxShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)'
               }}
             >
-              {/* <InputGroupAddon addonType='prepend'>
-                <InputGroupText>Student ID</InputGroupText>
-              </InputGroupAddon> */}
               <Input
                 style={{
                   textAlign: 'center'
