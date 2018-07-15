@@ -6,7 +6,7 @@ class ImageSlider extends React.Component {
     const images = [
       {
         original: 'https://dummyimage.com/1000x400/eb6feb/fff',
-        thumbnail: 'https://dummyimage.com/250x150/eb6feb/fff'
+        thumbnail: 'https://dummyimage.com/250x150/eb6feb/fff',
       },
       {
         original: 'https://dummyimage.com/1000x400/eb6feb/fff',
@@ -27,7 +27,7 @@ class ImageSlider extends React.Component {
     ]
 
     return (
-      <ImageGallery items={images} autoPlay />
+      <ImageGallery items={images} showFullscreenButton={false} autoPlay />
     )
   }
 }
