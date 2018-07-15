@@ -67,7 +67,7 @@ class Home extends React.Component {
             color="danger"
             style={{ marginTop: '10px' }}
           >
-            Logout(mock)
+            Logout
             </Button>
         </div>
         <div style={{ marginTop: '10px' }}>

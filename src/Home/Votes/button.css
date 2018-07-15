@@ -2,7 +2,10 @@
     background: rgb(0,0,0);
     color: white;
     border-radius: 4px;
-    padding: 20px 60px;
+    width: 100%;
+    max-width: 225px;
+    height: 10vh;
+    max-height: 75px;
     border: 1px solid rgba(255,255,255,0.5);
     margin-top: 20px;
     cursor: pointer;
@@ -14,7 +17,7 @@
 }
 
 .vote-button.is-active {
-    background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgb(51, 91, 171);
+    border: 1px solid white;
     color: white;
 }

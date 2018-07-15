@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as firebase from 'firebase'
+import firebase from 'firebase/app'
 import firebaseConfig from './Firebase/Config'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 // import auth from './utils/auth'
