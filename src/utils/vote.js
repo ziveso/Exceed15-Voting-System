@@ -12,22 +12,25 @@ const currentVote = (studentId, state) => {
 
 const vote = async (studentId, type, team) => {
   type = type.toLowerCase()
-  await firebase.database().ref('vote/vote/' + studentId + '/' + type).once('value').then( async (oldteam) => {
-    if(oldteam.val()!=null) {
-      const oldValue = firebase.database().ref('vote/count/' + type + '/' + oldteam.val())
-      await oldValue.once('value').then( (snap) => {
-        oldValue.set(snap.val() - 1)
-      })
-    }
-    const newValue = firebase.database().ref('vote/count/' + type + '/' + team)
-    await newValue.once('value').then( (snap) => {
-      if(snap.val()) {
-        newValue.set(snap.val() + 1)
-      } else {
-        newValue.set(1)
-      }
-    })
-  })
+
+  // not working
+  // // this could cause bug if 2 person call at the same time!!!
+  // await firebase.database().ref('vote/vote/' + studentId + '/' + type).once('value').then( async (oldteam) => {
+  //   if(oldteam.val()!=null) {
+  //     const oldValue = firebase.database().ref('vote/count/' + type + '/' + oldteam.val())
+  //     await oldValue.once('value').then( (snap) => {
+  //       oldValue.set(snap.val() - 1)
+  //     })
+  //   }
+  //   const newValue = firebase.database().ref('vote/count/' + type + '/' + team)
+  //   await newValue.once('value').then( (snap) => {
+  //     if(snap.val()) {
+  //       newValue.set(snap.val() + 1)
+  //     } else {
+  //       newValue.set(1)
+  //     }
+  //   })
+  // })
 
   firebase.database().ref('vote/vote/' + studentId + '/' + type).set(team)
 }
