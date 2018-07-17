@@ -1,4 +1,4 @@
-export const type = [ 'software', 'hardware', 'design' ]
+export const type = [ 'software', 'hardware', 'design', 'best pitching' ]
 
 export const teamname = [
     'suckceed',

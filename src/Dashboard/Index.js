@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import firebase from 'firebase/app'
 import students from '../config/studentId'
+import sortObj from 'sort-object'
+import { Wrapper } from './Components/Wrapper'
+import { type as types, teamname } from '../config/config';
 import 'firebase/database'
-// import { type as types, teamname } from '../config/config';
 
 export class Index extends Component {
   constructor(props) {
@@ -10,7 +12,6 @@ export class Index extends Component {
     this.state = {
       votes: {},
     }
-    this.count = this.count.bind(this)
   }
 
   componentDidMount() {
@@ -19,32 +20,43 @@ export class Index extends Component {
     })
   }
 
-  // count() {
-  //   const voted_id = Object.keys(this.state.votes)
-  //   const vote = voted_id.map( id => {
-  //     return this.state.votes[id]
-  //   })
+  count() {
+    let count = {}
+    types.forEach((type) => {
+      count[type] = {}
+      teamname.forEach((team) => {
+        count[type][team] = 0
+      })
+    })
 
-  //   let result = {}
-  //   // initialize
-  //   types.forEach( (type) => {
-  //     result = { ...result,[type]: [] }
-  //   })
-  //   types.forEach( (type) => {
-  //     vote.forEach( (v) => {
-  //       result = {...result, [type]: [...result[type] ,v[type]]}
-  //     })
-  //   })
-  //   console.log(result)
-  // }
+    const voted_id = Object.keys(this.state.votes)
+    const vote = voted_id.map( id => {
+      return this.state.votes[id]
+    })
+
+    let result = {}
+    // initialize
+    types.forEach( (type) => {
+      result = { ...result,[type]: [] }
+    })
+    types.forEach( (type) => {
+      vote.forEach( (v) => {
+        result = {...result, [type]: [...result[type] ,v[type]]}
+      })
+    })
+    Object.keys(result).forEach((type) => {
+      result[type].forEach((team) => {
+        count = { ...count, [type]: { ...count[type], [team]: count[type][team] + 1 } }
+      })
+    })
+    return count
+  }
 
   render() {
-    // this.count()
+    const count = this.count()
     return (
       <div>
-        <div>Total vote</div>
-        <div>{Object.keys(this.state.votes).length} / {students.length}</div>
-        { JSON.stringify(this.state.votes) }
+        <Wrapper votes={count}/>
       </div>
     )
   }

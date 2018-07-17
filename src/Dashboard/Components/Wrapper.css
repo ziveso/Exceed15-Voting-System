@@ -1,0 +1,15 @@
+.leaderboard-header {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 7px;
+    -webkit-text-stroke: 3px black;
+}
+
+@media (min-width: 768px) {
+    .leaderboard-header {
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: 7px;
+        -webkit-text-stroke: 3px black;
+    }
+}

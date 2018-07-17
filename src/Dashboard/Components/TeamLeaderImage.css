@@ -1,0 +1,17 @@
+#team-leader-image {
+    background-size: cover;
+    padding: 15vw;
+}
+
+#team-leader-image span {
+    color: white;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    -webkit-text-stroke-width: 3.5px;
+}
+
+@media (min-width:768px) {
+    #team-leader-image {
+        padding: 7vw;
+    }
+}
