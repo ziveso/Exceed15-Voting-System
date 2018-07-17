@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import firebase from 'firebase/app'
-import students from '../config/studentId'
-import sortObj from 'sort-object'
 import { Wrapper } from './Components/Wrapper'
 import { type as types, teamname } from '../config/config';
 import 'firebase/database'
