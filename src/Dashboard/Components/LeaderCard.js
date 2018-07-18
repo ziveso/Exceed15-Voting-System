@@ -9,13 +9,14 @@ export class LeaderCard extends Component {
         return { name: item, value: this.props.votes[item]}
     });
     arr = _.sortBy(arr, (item) => { return -(item.value) })
+    console.log(arr.length);
     return (
-      <div className='col-md-4'>
+      <div className='col-md-6' style={{ padding: '0 7%' }}>
         <div style={{ border: '1px solid rgb(230,230,230)', borderTop: 'none', marginBottom: '10px'}}>
             <TeamLeaderImage teamname={arr[0].name} type={this.props.type} />
-            <TeamName rank='1st' name={arr[0].name} score={arr[0].value} />
-            <TeamName rank='2nd' name={arr[1].name} score={arr[1].value} />
-            <TeamName rank='3rd' name={arr[2].name} score={arr[2].value} />
+            <TeamName rank='1st' name={arr[0].name} score={ Math.ceil(arr[0].value / arr.length * 100)} />
+            <TeamName rank='2nd' name={arr[1].name} score={ Math.ceil(arr[1].value / arr.length * 100)} />
+            <TeamName rank='3rd' name={arr[2].name} score={ Math.ceil(arr[2].value / arr.length * 100)} />
         </div>
       </div>
     )
