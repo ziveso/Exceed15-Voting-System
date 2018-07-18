@@ -14,7 +14,7 @@ const logout = () => {
 }
 
 const isLoggedIn = () => {
-  return (window.localStorage.studentId && window.localStorage.studentId.length === 10) || false
+  return (window.localStorage.studentId && studentIds.includes(window.localStorage.studentId)) || false
 }
 
 const redirectIfNotLoggedIn = () => {
