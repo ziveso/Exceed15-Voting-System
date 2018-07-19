@@ -1,17 +1,19 @@
 export const type = [ 'software', 'hardware', 'popular', 'pitching' ]
 
 export const teamname = [
-    'suckceed',
-    'CEEDler',
-    'ZeedWea',
-    'OACEED',
-    'AssassinZEED',
-    'Kaiceedกว่า',
-    'ข้าวยำไก่ZEED',
-    'SeoCEED SarbSarn',
-    'ZeedUp UpDownๆๆๆ',
-    '(ฟูม)ฟักSeed',
-    'ZeedVil War',
-    'CEEDney', 
-    'ไก่Zeed เจ้าเก่า',
-    'WingsZabCeed']
+    'บัวปาล์ม',
+    'ปาล์มยุทธ',
+    'Classic Palm',
+    'Palm Palmm Plammm',
+    'Finger Palm',
+    'ลามปาล์ม',
+    'i-Plam',
+    'Plamwith',
+    'ปาล์มมี๊มี',
+    'T Plam',
+    'WONG PALM',
+    'Ton Palm',
+    'เติ้ง.Plam',
+    'PALM FACTORY',
+    'Odinpalm',
+    'O PALM' ]

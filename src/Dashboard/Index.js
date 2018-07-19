@@ -27,7 +27,8 @@ export class Index extends Component {
       })
     })
 
-    const voted_id = Object.keys(this.state.votes)
+
+    const voted_id = this.state.votes ? Object.keys(this.state.votes) : []
     const vote = voted_id.map( id => {
       return this.state.votes[id]
     })
