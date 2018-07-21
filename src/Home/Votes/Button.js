@@ -21,6 +21,8 @@ export class Button extends Component {
     this.toggle = this.toggle.bind(this)
   }
   toggle() {
+    if (this.props.voted === this.props.children)
+      return
     this.setState({ modal: !this.state.modal })
   }
   handleClick = () => {
