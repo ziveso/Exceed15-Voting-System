@@ -23,7 +23,7 @@ export class App extends Component {
 
           <Route path='/login' component={LoginPage} />
           {/* USER */}
-          <Route path='/dashboard' component={Index} />
+          <Route path='/da2hb0ard' component={Index} />
         </div>
       </Router>
     )
