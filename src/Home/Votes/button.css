@@ -27,3 +27,15 @@
     /* border: 1px solid white; */
     color: white;
 }
+
+.alert-modal {
+    font-family: 'Athiti', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+}
+
+.alert-modal button span {
+    position: absolute;
+    right: 20px;
+}

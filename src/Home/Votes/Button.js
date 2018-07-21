@@ -37,11 +37,11 @@ export class Button extends Component {
       <div className='col-6 text-center'>
         <button className={`vote-button ${style}`} onClick={this.toggle}>{this.props.children}</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Vote</ModalHeader>
-          <ModalBody>Vote <b style={{ color: 'blue' }}>{this.props.children}</b> for {this.props.type} award ?</ModalBody>
-          <ModalFooter>
-            <VoteButton color="primary" onClick={() => { this.handleClick(); this.toggle() }}>Confirm</VoteButton>
-            <VoteButton color="danger" onClick={() => this.toggle()}>Cancel</VoteButton>
+          <ModalHeader toggle={this.toggle} className="alert-modal"><p>Vote</p></ModalHeader>
+          <ModalBody className="alert-modal">Vote <b style={{ color: '#ad1f26' }}>{this.props.children}</b> for <b>{this.props.type}</b> award ?</ModalBody>
+          <ModalFooter className="alert-modal" style={{ textAlign: 'center', margin: 'auto' }}>
+            <VoteButton color="primary" style={{ background: 'black' }} onClick={() => { this.handleClick(); this.toggle() }}>Confirm</VoteButton>
+            <VoteButton color="danger" style={{ background: 'black' }} onClick={() => this.toggle()}>Cancel</VoteButton>
           </ModalFooter>
         </Modal>
       </div>
