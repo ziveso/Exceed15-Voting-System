@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './TeamLeaderImage.css'
-import TeamImage from '../../image/DSC_3600.jpg'
+import TeamImage from '../../image/team/original/DSC_3600.jpg'
 
 export class TeamLeaderImage extends Component {
   render() {
