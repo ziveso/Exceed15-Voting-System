@@ -56,6 +56,7 @@ class Home extends React.Component {
               marginTop: '25px',
               fontSize: '2.5em',
               color: 'white',
+              paddingLeft: '15px',
               textShadow: 'green 0px 0px 10px, orange 0px 0px 24px'
             }}><b>EXCEED15</b></div>
           </div>
@@ -73,7 +74,6 @@ class Home extends React.Component {
             onClick={auth.logout}
             style={{ marginTop: '10px', 
                     position: 'absolute',
-                    left: '10px',
                     border: 'none',
                     boxShadow: '0px 0px 10px black',
                     background: 'rgba(0,0,0,0.8)' }}
@@ -88,7 +88,7 @@ class Home extends React.Component {
           <div style={{ backgroundImage: `url(${background})`, width: '100%', height: '100vh', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}></div>
           </div>
        
-        <div style={{  margin: 'auto' ,marginTop: '40px', width: '100%', maxWidth: '750px'}}>
+        <div className="img-slider" style={{  width: '100%', maxWidth: '750px'}}>
           <ImageSlider />
         </div>
         <div style={{marginBottom: '20px'}}>
