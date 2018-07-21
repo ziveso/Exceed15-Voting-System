@@ -4,7 +4,7 @@ import { ButtonWrapper } from './ButtonWrapper'
 
 export class index extends Component {
   render () {
-    const style = { background: 'rgb(41,41,41)', color: 'white' }
+    const style = { background: 'rgba(255, 255, 255,0.4)', color: 'white', boxShadow: '0px 0px 15px #888888' }
     return (
       <div id='vote'>
         <div className='container' style={style}>

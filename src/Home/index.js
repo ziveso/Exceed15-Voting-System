@@ -9,7 +9,7 @@ import Vote from './Votes/index'
 import { currentVote } from '../utils/vote'
 import { type } from '../config/config'
 import './index.css'
-import background from '../image/home-background.jpg'
+import background from '../image/1111.jpg'
 
 class Home extends React.Component {
   constructor(props) {
@@ -45,16 +45,19 @@ class Home extends React.Component {
     const votecomponent = type.map((item, index) => {
       return <Vote key={`vote${index}`} title={item.toUpperCase()} voted={this.state.vote[item]} />
     })
-    console.log(background)
     return (
       <div>
          <div className='text-center'>
-          <h1 style={{
-            letterSpacing: '13px',
-            color: 'black',
-            WebkitTextStroke: '3px black',
-            marginTop: '25px',
-          }}>EXCEED15</h1>
+          <div>
+            <div style={{
+              letterSpacing: '13px',
+              // WebkitTextStroke: '1px black',
+              marginTop: '25px',
+              fontSize: '2.5em',
+              color: 'white',
+              textShadow: 'green 0px 0px 10px, orange 0px 0px 24px'
+            }}><b>EXCEED15</b></div>
+          </div>
           <div style={{
             border: '2px solid lightgrey',
             width: '100%',
@@ -62,24 +65,32 @@ class Home extends React.Component {
             margin: 'auto',
             padding: '5px 0 5px 0',
             borderRadius: '5px',
-            marginTop: '25px',
+            background: 'white'
           }}>{window.localStorage.studentId}</div>
           <Button
             className="logout"
             onClick={auth.logout}
-            color="danger"
-            style={{ marginTop: '10px' }}
+            style={{ marginTop: '10px', 
+                    position: 'absolute',
+                    left: '10px',
+                    backgroundColor: 'black' }}
           >
             Logout
             </Button>
         </div>
 
-        <div style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100vh', zIndex: '-99' }}><div style={{ backgroundImage: `url(${background})`, width: '100%', height: '100vh', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}></div></div>
+        <div style={{ position: 'fixed', top: '0', left: '0', width: '45%', height: '100vh', zIndex: '-99', background: 'rgb(224,229,225)' }}>
+        </div>
+        <div style={{ position: 'fixed', top: '0', left: '45%', width: '55%', height: '100vh', zIndex: '-99' }}>
+          <div style={{ backgroundImage: `url(${background})`, width: '100%', height: '100vh', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}></div>
+          </div>
        
-        <div style={{  margin: 'auto' ,marginTop: '10px', width: '50%'}}>
+        <div style={{  margin: 'auto' ,marginTop: '40px', width: '100%', maxWidth: '750px'}}>
           <ImageSlider />
         </div>
-        {votecomponent}
+        <div style={{marginBottom: '20px'}}>
+          {votecomponent}
+        </div>
         <style>{`
           @media only screen and (min-width: 600px) {
              .logout {

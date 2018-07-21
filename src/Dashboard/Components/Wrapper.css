@@ -2,14 +2,17 @@
     text-align: center;
     font-size: 2rem;
     letter-spacing: 7px;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 5px black;
+    padding: 30px 0;
+    font-family: 'Fredoka One', cursive;
+    color: white !important;
+    /* text-shadow: 0 0 15px white; */
 }
 
 @media (min-width: 768px) {
     .leaderboard-header {
         text-align: center;
-        font-size: 3rem;
-        letter-spacing: 7px;
-        -webkit-text-stroke: 3px black;
+        font-size: 5rem;
+        letter-spacing: 20px;
     }
 }

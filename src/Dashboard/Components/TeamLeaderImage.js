@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import './TeamLeaderImage.css'
+import TeamImage from '../../image/DSC_3600.jpg'
 
 export class TeamLeaderImage extends Component {
   render() {
     return (
       <div id='team-leader-image' className='text-center'
-        style={{ backgroundImage: 'url("https://placeimg.com/640/480/any")' }}>
-        <span>{this.props.type}</span>
+        style={{ backgroundImage: `url(${TeamImage})` }}>
+        {/* style={{ background: 'white'}} > */}
+
+        <span style={{ fontFamily: `'Fredoka One', cursive`, textShadow: '0 0 15px black'}}>
+          {this.props.type.toUpperCase()}
+        </span>
       </div>
     )
   }

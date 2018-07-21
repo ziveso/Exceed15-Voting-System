@@ -1,5 +1,6 @@
-export const type = [ 'software', 'hardware', 'popular', 'pitching' ]
+export const type = [ 'software', 'hardware', 'popular', 'pitching', 'design', 'model', 'idea' ]
 
+// export const type = [ 'demo1', 'demo2', 'demo2', 'demo2', 'demo2', 'demo2', 'demo2' ]
 export const teamname = [
     'บัวปาล์ม',
     'ปาล์มยุทธ',
