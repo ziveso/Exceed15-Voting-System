@@ -8,6 +8,8 @@ import ImageSlider from './ImageSlider'
 import Vote from './Votes/index'
 import { currentVote } from '../utils/vote'
 import { type } from '../config/config'
+import './index.css'
+import background from '../image/home-background.jpg'
 
 class Home extends React.Component {
   constructor(props) {
@@ -43,13 +45,14 @@ class Home extends React.Component {
     const votecomponent = type.map((item, index) => {
       return <Vote key={`vote${index}`} title={item.toUpperCase()} voted={this.state.vote[item]} />
     })
+    console.log(background)
     return (
       <div>
-        <div className='text-center'>
+         <div className='text-center'>
           <h1 style={{
             letterSpacing: '13px',
-            color: 'rgb(160,160,160)',
-            WebkitTextStroke: '3px rgb(160,160,160)',
+            color: 'black',
+            WebkitTextStroke: '3px black',
             marginTop: '25px',
           }}>EXCEED15</h1>
           <div style={{
@@ -70,7 +73,10 @@ class Home extends React.Component {
             Logout
             </Button>
         </div>
-        <div style={{ marginTop: '10px' }}>
+
+        <div style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100vh', zIndex: '-99' }}><div style={{ backgroundImage: `url(${background})`, width: '100%', height: '100vh', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}></div></div>
+       
+        <div style={{  margin: 'auto' ,marginTop: '10px', width: '50%'}}>
           <ImageSlider />
         </div>
         {votecomponent}

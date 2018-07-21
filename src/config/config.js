@@ -16,4 +16,4 @@ export const teamname = [
     'เติ้ง.Plam',
     'PALM FACTORY',
     'Odinpalm',
-    'O PALM' ]
+    'O PALM']

@@ -6,6 +6,8 @@ import {
 } from 'reactstrap'
 import auth from '../utils/auth'
 import { withRouter } from 'react-router-dom'
+import background from '../image/login-background.jpg'
+import './index.css'
 
 const full = {
   width: '100vw',
@@ -13,7 +15,10 @@ const full = {
   overflow: 'hidden',
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  backgroundImage: `url(${background})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
 }
 
 class Login extends React.Component {
@@ -48,7 +53,7 @@ class Login extends React.Component {
     return (
       <div style={full}>
         <div className='p-2 w-100 text-center'>
-          <h1>EXCEED 15th</h1>
+          <div className='exceed-header'>Exceed 15<sup>th</sup></div>
           <form
             onSubmit={this.login}
             style={{
@@ -57,32 +62,34 @@ class Login extends React.Component {
               marginTop: '20px'
             }}
           >
-            <InputGroup
-              className='rounded mb-2'
-              style={{
-                height: '45px',
-                borderRadius: '4px',
-                boxShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)'
-              }}
-            >
-              <Input
+            <div className='exceed-btn-login'>
+              <InputGroup
+                className='rounded mb-2'
                 style={{
-                  textAlign: 'center'
+                  height: '40px',
+                  borderRadius: '4px',
+                  boxShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)'
                 }}
-                type='number'
-                placeholder='Student ID'
-                value={this.state.id}
-                onChange={this.handleChange}
-              />
-            </InputGroup>
-            {this.state.error && (
-              <div className='text-danger'>
-                Invalid student ID!
-              </div>
-            )}
-            <Button type='submit' className='mt-4' color='primary' block onClick={this.login}>
-              Login
-            </Button>
+              >
+                <Input
+                  style={{
+                    textAlign: 'center'
+                  }}
+                  type='number'
+                  placeholder='Student ID'
+                  value={this.state.id}
+                  onChange={this.handleChange}
+                />
+              </InputGroup>
+              <Button type='submit' className='mt-2' style={{ background: 'black' }} block onClick={this.login}>
+                Login
+              </Button>
+              {this.state.error && (
+                <div className='text-danger mt-2'>
+                  Invalid student ID!
+                </div>
+              )}
+            </div>
           </form>
         </div>
       </div>

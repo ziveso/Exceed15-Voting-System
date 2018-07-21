@@ -1,0 +1,22 @@
+.exceed-header {
+    font-family: 'Audiowide', cursive;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(19, 19, 19, 0.86);
+}
+
+
+.exceed-btn-login {
+    max-width: 80%;
+    margin: auto;
+}
+
+@media (min-width:768px) {
+    .exceed-header {
+        font-size: 70px;
+    }
+
+    .exceed-btn-login {
+        max-width: 100%;
+    }
+}
