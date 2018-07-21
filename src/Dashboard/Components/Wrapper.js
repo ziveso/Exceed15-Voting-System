@@ -9,7 +9,7 @@ export class Wrapper extends Component {
         return <LeaderCard key={`leader${index}`} type={type} votes={this.props.votes[type]} />
     })
     return (
-      <div>
+      <div style={{ marginTop: '0', marginLeft: '40px' }}>
           <div style={{
                       position:'fixed',
                       top: '0',
