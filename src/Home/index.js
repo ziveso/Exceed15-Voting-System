@@ -22,6 +22,7 @@ class Home extends React.Component {
       vote
     }
   }
+  
   componentDidMount() {
     auth.redirectIfNotLoggedIn()
     currentVote(window.localStorage.studentId, this)
