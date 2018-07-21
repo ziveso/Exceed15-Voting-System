@@ -22,7 +22,7 @@ class Home extends React.Component {
       vote
     }
   }
-  
+
   componentDidMount() {
     auth.redirectIfNotLoggedIn()
     currentVote(window.localStorage.studentId, this)
@@ -48,7 +48,7 @@ class Home extends React.Component {
     })
     return (
       <div>
-         <div className='text-center'>
+        <div className='text-center'>
           <div>
             <div style={{
               letterSpacing: '13px',
@@ -67,16 +67,18 @@ class Home extends React.Component {
             margin: 'auto',
             padding: '5px 0 5px 0',
             borderRadius: '5px',
-            background: 'white'
+            background: 'rgba(255, 255, 255, 0.7)'
           }}>{window.localStorage.studentId}</div>
           <Button
             className="logout"
             onClick={auth.logout}
-            style={{ marginTop: '10px', 
-                    position: 'absolute',
-                    border: 'none',
-                    boxShadow: '0px 0px 10px black',
-                    background: 'rgba(0,0,0,0.8)' }}
+            style={{
+              marginTop: '10px',
+              position: 'absolute',
+              border: 'none',
+              boxShadow: '0px 0px 10px black',
+              background: 'rgba(0,0,0,0.8)'
+            }}
           >
             Logout
             </Button>
@@ -85,13 +87,13 @@ class Home extends React.Component {
         <div style={{ position: 'fixed', top: '0', left: '0', width: '45%', height: '100vh', zIndex: '-99', background: 'rgb(224,229,225)' }}>
         </div>
         <div style={{ position: 'fixed', top: '0', left: '45%', width: '55%', height: '100vh', zIndex: '-99' }}>
-          <div style={{ backgroundImage: `url(${background})`, width: '100%', height: '100vh', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}></div>
-          </div>
-       
-        <div className="img-slider" style={{  width: '100%', maxWidth: '750px'}}>
+          <div style={{ backgroundImage: `url(${background})`, width: '100%', height: '100vh', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}></div>
+        </div>
+
+        <div className="img-slider" style={{ width: '100%', maxWidth: '750px' }}>
           <ImageSlider />
         </div>
-        <div style={{marginBottom: '20px'}}>
+        <div style={{ marginBottom: '20px' }}>
           {votecomponent}
         </div>
         <style>{`

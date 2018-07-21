@@ -19,76 +19,92 @@ import PalmYuth from '../image/team/scale/ปาล์มยุทธ.jpg'
 import LamPalm from '../image/team/scale/ลามปาล์ม.jpg'
 
 class ImageSlider extends React.Component {
-  render () {
+  render() {
     const images = [
       {
         original: ClassicPalm,
         thumbnail: ClassicPalm,
+        description: 'Classic Palm'
       },
       {
         original: FingerPalm,
-        thumbnail: FingerPalm
+        thumbnail: FingerPalm,
+        description: 'Finger Palm'
       },
       {
         original: IPalm,
-        thumbnail: IPalm
+        thumbnail: IPalm,
+        description: 'I Palm'
       },
       {
         original: OdinPalm,
-        thumbnail: OdinPalm
+        thumbnail: OdinPalm,
+        description: 'Odin Palm'
       },
       {
         original: oPalm,
-        thumbnail: oPalm
+        thumbnail: oPalm,
+        description: 'O Palm'
       },
       {
         original: PalmFactory,
-        thumbnail: PalmFactory
+        thumbnail: PalmFactory,
+        description: 'Palm Factory'
       },
       {
         original: palmpalmmpalmmm,
-        thumbnail: palmpalmmpalmmm
+        thumbnail: palmpalmmpalmmm,
+        description: 'Palm Palm Palm'
       },
       {
         original: Palmwith,
-        thumbnail: Palmwith
+        thumbnail: Palmwith,
+        description: 'Palmwith'
       },
       {
         original: TonPalm,
-        thumbnail: TonPalm
+        thumbnail: TonPalm,
+        description: 'Ton Palm'
       },
       {
         original: WongPalm,
-        thumbnail: WongPalm
+        thumbnail: WongPalm,
+        description: 'Wong Palm'
       },
       {
         original: TerngPalm,
-        thumbnail: TerngPalm
+        thumbnail: TerngPalm,
+        description: 'Terng Palm'
       },
       {
         original: TPalm,
-        thumbnail: TPalm
+        thumbnail: TPalm,
+        description: 'T Palm'
       },
       {
         original: BuaPalm,
-        thumbnail: BuaPalm
+        thumbnail: BuaPalm,
+        description: 'บัวปาล์ม'
       },
       {
         original: Palmmeemee,
-        thumbnail: Palmmeemee
+        thumbnail: Palmmeemee,
+        description: 'ปาล์มมี๊มี'
       },
       {
         original: PalmYuth,
-        thumbnail: PalmYuth
+        thumbnail: PalmYuth,
+        description: 'ปาล์มยุทธ'
       },
       {
         original: LamPalm,
-        thumbnail: LamPalm
+        thumbnail: LamPalm,
+        description: 'ลามปาล์ม'
       }
     ]
 
     return (
-      <ImageGallery items={images} showFullscreenButton={false} autoPlay />
+      <ImageGallery items={images} autoPlay />
     )
   }
 }
