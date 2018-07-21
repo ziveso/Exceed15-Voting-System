@@ -2,3 +2,24 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.logout {
+    left: 10px;
+}
+
+.img-slider {
+    margin: auto;
+    margin-top: 40px;
+}
+
+@media (max-width: 769px){
+    .logout {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .img-slider {
+        margin: auto;
+        margin-top: 60px;
+    }
+}
