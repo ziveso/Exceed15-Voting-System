@@ -73,7 +73,9 @@ class Home extends React.Component {
             style={{ marginTop: '10px', 
                     position: 'absolute',
                     left: '10px',
-                    backgroundColor: 'black' }}
+                    border: 'none',
+                    boxShadow: '0px 0px 10px black',
+                    background: 'rgba(0,0,0,0.8)' }}
           >
             Logout
             </Button>
