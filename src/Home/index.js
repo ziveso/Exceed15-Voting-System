@@ -6,7 +6,7 @@ import {
 } from 'reactstrap'
 import ImageSlider from './ImageSlider'
 import Vote from './Votes/index'
-import { currentVote } from '../utils/vote'
+import { currentVote, currentVoteType } from '../utils/vote'
 import { type } from '../config/config'
 import './index.css'
 import background from '../image/1111.jpg'
@@ -19,13 +19,19 @@ class Home extends React.Component {
       vote = { ...vote, [item]: null }
     })
     this.state = {
-      vote
+      vote,
+      votes: []
     }
   }
 
   componentDidMount() {
     auth.redirectIfNotLoggedIn()
     currentVote(window.localStorage.studentId, this)
+    currentVoteType(window.localStorage.studentId, this.onVote)
+  }
+
+  onVote = (votes) => {
+    this.setState({votes: votes})
   }
 
   getCard = (groupName, src, content) => {
@@ -44,7 +50,7 @@ class Home extends React.Component {
 
   render() {
     const votecomponent = type.map((item, index) => {
-      return <Vote key={`vote${index}`} title={item.toUpperCase()} voted={this.state.vote[item]} />
+      return <Vote key={`vote${index}`} votes={this.state.votes} title={item.toUpperCase()} voted={this.state.vote[item]} />
     })
     return (
       <div>

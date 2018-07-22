@@ -10,6 +10,15 @@ const currentVote = (studentId, state) => {
   })
 }
 
+const currentVoteType = (studentId, onVote) => {
+  firebase.database().ref('vote/vote/' + studentId).on('value', (snap) => {
+    if(snap.val()) {
+      const voted = Object.values(snap.val())
+      onVote(voted);
+    }
+  })
+}
+
 const vote = async (studentId, type, team) => {
   type = type.toLowerCase()
 
@@ -37,5 +46,6 @@ const vote = async (studentId, type, team) => {
 
 export {
   currentVote,
+  currentVoteType,
   vote
 }
