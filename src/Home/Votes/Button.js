@@ -35,9 +35,10 @@ export class Button extends Component {
   }
   render() {
     const style = this.props.voted === this.props.children ? 'is-active' : ''
+    const voted = this.props.votes.includes(this.props.children) ? 'disabled' : ''
     return (
       <div className='col-6 text-center'>
-        <button className={`vote-button ${style}`} onClick={this.toggle}>{this.props.children}</button>
+        <button className={`vote-button ${style} ${voted}`} onClick={this.toggle} disabled={this.props.votes.includes(this.props.children)}>{this.props.children}</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle} className="alert-modal"><p>Vote</p></ModalHeader>
           <ModalBody className="alert-modal">Vote <b style={{ color: '#ad1f26' }}>{this.props.children}</b> for <b>{this.props.type}</b> award ?</ModalBody>

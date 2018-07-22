@@ -14,6 +14,22 @@
     font-family: 'Athiti', sans-serif;
 }
 
+.vote-button.disabled {
+    background: rgba(104, 105, 105,0.8);
+    /* border: 1px solid white; */
+    color: white;
+}
+
+.vote-button.vote-button.is-active.disabled:hover {
+    color: black;
+    background: rgba(255,255,255,0.8);
+}
+
+.vote-button.disabled:hover {
+    background: rgba(104, 105, 105,0.8);
+    box-shadow: 0px 0px 15px rgb(0,0,0);
+}
+
 .vote-button:hover {
     background: rgb(0,0,0);
 
@@ -23,9 +39,8 @@
 }
 
 .vote-button.is-active {
-    background: rgba(104, 105, 105,0.8);
-    /* border: 1px solid white; */
-    color: white;
+    color: black;
+    background: rgba(255,255,255,0.8);
 }
 
 .alert-modal {

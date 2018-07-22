@@ -9,6 +9,7 @@ import popularImg from '../../image/type/popular.jpg'
 import modelImg from '../../image/type/model.jpg'
 import ideaImg from '../../image/type/idea.jpg'
 export class index extends Component {
+
   render () {
     const style = { background: 'rgba(255, 255, 255,0.4)', color: 'white', boxShadow: '0px 0px 15px #888888' }
     let background = '';
@@ -27,7 +28,7 @@ export class index extends Component {
         <div className='container' style={style}>
           <div className='row'>
             <div style={{ backgroundImage: `url(${background})`, backgroundPositionX: '-40px' , textShadow: '0 0 15px black' }} className='col-12 col-md-5 title text-center'><span>{this.props.title}</span></div>
-            <div className='col-12 col-md-7'><ButtonWrapper voted={this.props.voted} type={this.props.title} /></div>
+            <div className='col-12 col-md-7'><ButtonWrapper votes={this.props.votes} voted={this.props.voted} type={this.props.title} /></div>
           </div>
         </div>
       </div>
