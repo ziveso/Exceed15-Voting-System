@@ -7,11 +7,15 @@ import LoginPage from './Login'
 import './App.css'
 import { Index } from './Dashboard/Index'
 import Home from './Home'
+import 'firebase/database';
 
 export class App extends Component {
   constructor (props) {
     super(props)
     firebase.initializeApp(firebaseConfig)
+    firebase.database().ref('/vote/vote').on('value', (snap) => {
+      console.log(Object.keys(snap.val()).length)
+    })
   }
 
   render () {

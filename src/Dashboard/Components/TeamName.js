@@ -10,7 +10,7 @@ export class TeamName extends Component {
         padding: '10px 20px',
         margin: '10px 20px',
         fontFamily: `'Athiti', sans-serif`,
-        fontSize: '30px',
+        fontSize: '20px',
         background: 'white',
         }}>
         <div className='d-flex'>

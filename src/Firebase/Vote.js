@@ -1,4 +1,0 @@
-// vote
-// getvote
-// changevote
-// unvote
